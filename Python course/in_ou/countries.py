@@ -28,6 +28,6 @@ while choice:
     if choice == "0":
         break
     else:
-        if choice in country_key:
+        if choice in countries:
             data = countries[choice]
             print(data['Capital'])

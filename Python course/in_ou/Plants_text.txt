@@ -1,11 +1,1 @@
-Andromeda - Shrub
-Bellflower - Flower
-Daffodil - Flower
-Evening Primrose - Flower
-French Marigold - Flower
-Hydrangea - Shrub
-Iris - Flower
-Japanese Camellia - Shrub
-Lavender - Shrub
-Lilac - Shrub
-Peony - Shrub
+Andromeda - ShrubBellflower - FlowerDaffodil - FlowerEvening Primrose - FlowerFrench Marigold - FlowerHydrangea - ShrubIris - FlowerJapanese Camellia - ShrubLavender - ShrubLilac - ShrubPeony - Shrub

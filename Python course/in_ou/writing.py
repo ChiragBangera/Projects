@@ -13,7 +13,7 @@ data = [
 ]
 
 plants_filename = "Plants_text.txt"
-# 
+#
 # with open(plants_filename, 'w') as plants:
 #     for plant in data:
 #         print(plant, file=plants)
@@ -25,6 +25,7 @@ plants_filename = "Plants_text.txt"
 #
 # print(new_list)
 
-with open(plants_filename, 'w') as plants:
-    for plant in data:
-        plants.write(plant)
+# with open(plants_filename, 'w') as plants:
+#     for plant in data:
+#         plants.write(plant)
+
