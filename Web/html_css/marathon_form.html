@@ -6,112 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marathon Registration</title>
     <link rel="stylesheet" href="styles.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+    CHIRAG/BANGERA
+    </nav>
     <form action="/chirag">
-        <div class="box">
+      <div class="box">
         <div class="set1">
-            <h2>Heading</h2>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-            accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
-            ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
-            repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Veritatis, assumenda iusto officia dolores porro eum at voluptatem
-            aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
-            repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit.
+          <h2>Heading</h2>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+          accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
+          ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
+          repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Veritatis, assumenda iusto officia dolores porro eum at voluptatem
+          aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
+          repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit.
         </div>
-      <div class="set1">
-        <h1>Race Registration!</h1>
-        <label for="fname">First Name</label><br />
-        <input type="text" required id="fname" name="name" /><br />
-        <label for="lname">Last Name</label><br />
-        <input type="text" required id="lname" name="name" />
-        <p>Select the race you want to register:</p>
-        <div class="radio">
-          <input type="radio" id="fun" name="race" />
-          <label for="fun">Fun run 5k</label>
+        <div class="set1">
+          <h1 class="form-head">Race Registration!</h1>
+          <label for="fname">First Name</label><br />
+          <input type="text" required id="fname" name="name" /><br />
+          <label for="lname">Last Name</label><br />
+          <input type="text" required id="lname" name="name" />
+          <p>Select the race you want to register:</p>
+          <div class="radio">
+            <input type="radio" id="fun" name="race" />
+            <label for="fun">Fun run 5k</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="half" name="race" />
+            <label for="half">Half Marathon</label>
+          </div>
+          <div class="radio">
+            <input type="radio" id="full" name="race" />
+            <label for="full">Full Marathon</label>
+          </div>
+          <div>
+            <p>
+              <label for="email">Email</label><br />
+              <input type="text" required id="email" name="empas" placeholder="Email" /><br />
+              <label for="pass">Password</label><br />
+              <input type="password" required id="pass" name="empas" placeholder="Password" />
+            </p>
+          </div>
+          <div>
+            <label for="age"> Select age group:</label>
+            <input list="age_groups" id="age" name="creame" required />
+            <datalist id="age_groups">
+              <option value="Under 18"></option>
+              <option value="18-30"></option>
+              <option value="30-50"></option>
+              <option value="50+"></option>
+            </datalist>
+          </div>
+          <div>
+            <p>
+              <button>Register</button>
+            </p>
+          </div>
         </div>
-        <div class="radio">
-          <input type="radio" id="half" name="race" />
-          <label for="half">Half Marathon</label>
+        <div class="set1">
+          <h2>Heading</h2>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+          accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
+          ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
+          repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Veritatis, assumenda iusto officia dolores porro eum at voluptatem
+          aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
+          repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit.
         </div>
-        <div class="radio">
-          <input type="radio" id="full" name="race" />
-          <label for="full">Full Marathon</label>
-        </div>
-        <div>
-          <p>
-            <label for="email">Email</label><br />
-            <input
-              type="text"
-              required
-              id="email"
-              name="empas"
-              placeholder="Email"
-            /><br />
-            <label for="pass">Password</label><br />
-            <input
-              type="password"
-              required
-              id="pass"
-              name="empas"
-              placeholder="Password"
-            />
-          </p>
-        </div>
-        <div>
-          <label for="age"> Select age group:</label>
-          <input list="age_groups" id="age" name="creame" required />
-          <datalist id="age_groups">
-            <option value="Under 18"></option>
-            <option value="18-30"></option>
-            <option value="30-50"></option>
-            <option value="50+"></option>
-          </datalist>
-        </div>
-        <div>
-          <p>
-            <button>Register</button>
-          </p>
+        <div class="set1">
+          <h2>Heading</h2>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+          accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
+          ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
+          repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Veritatis, assumenda iusto officia dolores porro eum at voluptatem
+          aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
+          repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit.
         </div>
       </div>
-    <div class="set1">
-        <h2>Heading</h2>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-        accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
-        ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
-        repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Veritatis, assumenda iusto officia dolores porro eum at voluptatem
-        aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
-        repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit.
-    </div>
-    <div class="set1">
-        <h2>Heading</h2>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-        accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
-        ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
-        repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Veritatis, assumenda iusto officia dolores porro eum at voluptatem
-        aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
-        repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit.
-    </div>
-    </div>
-    <div class="box">
-    <div class="set1">
-        <h2>Heading</h2>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-        accusantium minima et fugit perferendis ut quia recusandae omnis, ullam
-        ea perspiciatis deleniti dolorum! Ipsum impedit, iusto adipisci nostrum
-        repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Veritatis, assumenda iusto officia dolores porro eum at voluptatem
-        aliquid, temporibus autem iure et enim quod! Similique beatae eveniet
-        repellendus recusandae odio. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit.
-    </div>
-    </div>
+      <div class="box2">
+      <div class="trans">
+        <div class="set2">Transform me! <br>I Rotate</div>
+        <div class="set2">Transform me! <br>I Scale</div>
+        <div class="set2">Transform me! <br>I Translate</div>
+        <div class="set2">Transform me! <br>I Skew</div>
+        <div class="set2">Transform me! <br></div>
+        <div class="set2">Transform me! <br></div>
+        <div class="set2">Transform me! <br></div>
+        <div class="set2">Transform me! <br></div>
+      </div>
+      <div class="trans">
+        <div class="set2">Transform me! <br>I Rotate</div>
+        <div class="set2">Transform me! <br>I Scale</div>
+        <div class="set2">Transform me! <br>I Translate</div>
+        <div class="set2">Transform me! <br>I Skew</div>
+        <div class="set2">Transform me! <br></div>
+        <div class="set2">Transform me! <br></div>
+        <div class="set2">Transform me! <br></div>
+        <div class="set2">Transform me! <br></div>
+      </div>
+      </div>
     </form>
-  </head>
-  <body></body>
+  </body>
 </html>
