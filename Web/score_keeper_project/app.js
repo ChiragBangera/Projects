@@ -30,7 +30,6 @@ pclick.forEach(click =>{
         else if (clicked==='resb'){
             reset()
         }
-        console.log(winningScore)
         
     })
 })
