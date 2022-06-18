@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="/Web/score_keeper_project/style.css">
+</head>
+<body>
+    <div class="main-container">
+            <div class="container" id="p1container">
+                <h2>Player 1</h2>
+                <span id="p1d">0</span>
+                <button id="p1b">Point</button>
+            </div>
+            <div class="container" id="infocontainer">
+                <h2>Items</h2>
+                <button id="resb">Reset</button>
+                <h3 for="game-selector">Select Winning Score</h3>
+                <select id="game-selector">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                </select>
+            </div>
+            <div class="container" id="p2container">
+                <h2>Player 2</h2>
+                <span id="p2d">0</span>
+                <button id="p2b">Point</button>
+            </div>
+    </div>
+    <script src="/Web/score_keeper_project/app.js"></script>
+</body>
+</html>
