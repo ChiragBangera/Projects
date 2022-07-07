@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const Campground = require('./models/campground')
+const methodoverride = require('method-override')
 const mongoose = require('mongoose')
+const { find } = require('./models/campground')
 const DB = "mongodb+srv://chiragbangera:chiragadarsh@cluster1.c3lu4j0.mongodb.net/yelpcamp?retryWrites=true&w=majority"
 mongoose.connect(DB,
     {
@@ -42,8 +44,9 @@ app.get('/campgrounds/newcamp',(req,res)=>{
     res.render('campgrounds/new');
 })
 
+// new camp post
 app.post('/campgrounds',async (req,res)=>{
-    const {title,location}=req.body.campground;
+    const {title,location}=req.body;
     const newCamp = new Campground({title:title,location:location})
     await newCamp.save()
     res.redirect(`/campgrounds/${newCamp._id}`)
@@ -56,20 +59,32 @@ app.get('/campgrounds/:id',async (req,res)=>{
     res.render('campgrounds/show',{camp})
 })
 
-app.get('/campgrounds/:id/editcamp',(req,res)=>{
+// edit page
+app.get('/campgrounds/:id/editcamp',async (req,res)=>{
     const {id} = req.params;
-    const findCamp = Campground.findById(id)
+    const findCamp = await Campground.findById(id)
     res.render('campgrounds/editcamp',{findCamp})
+})
+
+// Updating the camp
+app.patch('/campgrounds/:id',async(req,res)=>{
+    const {id} = req.params;
+    const updatedCamp = req.body;
+    await Campground.findByIdAndUpdate(id,updatedCamp)
+    res.redirect(`/campgrounds/${id}`)
+})
+
+// deleting camp
+app.delete('/campgrounds/:id',async(req,res)=>{
+    const {id} = req.params;
+    await Campground.findByIdAndDelete(id)
+    res.redirect('/campgrounds')
 })
 
 
 
 
-
-
-
-
-const port = 3000
+const port = 4000
 app.listen(port,()=>{
     console.log(`Listening to ${port}`)
 })
