@@ -19,6 +19,8 @@ mongoose.connect(DB,
 
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'views'))
+app.use(express.urlencoded({extended:true}))
+app.use(methodoverride('_method'))
 
 
 
@@ -26,7 +28,7 @@ app.set('views',path.join(__dirname,'views'))
 
 
 app.get('/',(req,res)=>{
-    res.render('home')
+    res.render('home');
 })
 
 // Campground page
@@ -35,6 +37,17 @@ app.get('/campgrounds',async (req,res)=>{
     res.render('campgrounds/index',{campgrounds})
 })
 
+// new Camp
+app.get('/campgrounds/newcamp',(req,res)=>{
+    res.render('campgrounds/new');
+})
+
+app.post('/campgrounds',async (req,res)=>{
+    const {title,location}=req.body.campground;
+    const newCamp = new Campground({title:title,location:location})
+    await newCamp.save()
+    res.redirect(`/campgrounds/${newCamp._id}`)
+})
 
 // campground shoe route
 app.get('/campgrounds/:id',async (req,res)=>{
@@ -43,8 +56,11 @@ app.get('/campgrounds/:id',async (req,res)=>{
     res.render('campgrounds/show',{camp})
 })
 
-
-
+app.get('/campgrounds/:id/editcamp',(req,res)=>{
+    const {id} = req.params;
+    const findCamp = Campground.findById(id)
+    res.render('campgrounds/editcamp',{findCamp})
+})
 
 
 
