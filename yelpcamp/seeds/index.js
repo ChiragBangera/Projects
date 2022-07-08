@@ -24,9 +24,13 @@ const seedDB = async () => {
     await Campground.deleteMany({})
     for (let i = 0; i <= 50; i++) {
         const rand1000 = Math.floor(Math.random() * 1000)
+        const price = Math.floor(Math.random() * 500 + 100)
         const camp = new Campground({
             location: `${cities[rand1000].city},${cities[rand1000].state}`,
-            title:`${sample(descriptors)} ${sample(places)}`})
+            title:`${sample(descriptors)} ${sample(places)}`,
+            image: 'https://source.unsplash.com/collection/483251',
+            description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem rem necessitatibus nihil sequi nulla, adipisci hic. Commodi maiores, explicabo nesciunt voluptas earum, dolore excepturi suscipit dignissimos ea distinctio error?',
+            price:price})
         await camp.save()
     }
 }
@@ -36,4 +40,5 @@ const seedDB = async () => {
 
 seedDB().then(()=>{
     mongoose.connection.close()
+    console.log('Database Connection Closed')
 })
