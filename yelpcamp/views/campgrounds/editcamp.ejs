@@ -1,14 +1,36 @@
 <% layout('layout/boilerplate') %> 
 
-<h1>Edit Camp</h1>
-<form action="/campgrounds/<%= findCamp._id %>?_method=PATCH" method="POST">
-    <div>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="<%= findCamp.title %>">
+<div class="row">
+    <h1 class="text-center">Edit Campground</h1>
+    <div class="col-6 offset-3 mb-5">
+        <form action="/campgrounds/<%= findCamp._id %>?_method=PATCH" method="POST">
+            <div class="mb-3">
+                <label for="fortitle" class="form-label">Camp Title</label>
+                <input type="text" value="<%= findCamp.title %>" class="form-control" id="fortitle" aria-describedby="emailHelp"
+                    name="title">
+            </div>
+            <div class="mb-3">
+                <label for="forlocation" class="form-label">Location</label>
+                <input type="text" value="<%= findCamp.location %>" class="form-control" id="forlocation" name="location">
+            </div>
+            <div class="mb-3">
+                <label for="forimageurl" class="form-label">Image URL</label>
+                <input type="text" value="<%= findCamp.image %>" class="form-control" id="forimageurl" name="image">
+            </div>
+            <div class="mb-3">
+                <label for="forprice" class="form-label">Campground Price</label>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">&#8377</span>
+                <input type="number" value="<%= findCamp.price %>" class="form-control" placeholder="0.00" id="forprice" name="price">
+              </div>
+            </div>
+            <div class="mb-3">
+                <label for="fordescription" class="form-label">Description</label>
+                <textarea type="text" class="form-control" id="fordescription" name="description">
+                    <%= findCamp.description %>
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Update Camp</button>
+        </form>
     </div>
-    <div>
-        <label for="Location">Location</label>
-        <input type="text" name="location" id="location" value="<%= findCamp.location %>">
-    </div>
-    <button>Update Camp</button>
-</form>
+</div>
