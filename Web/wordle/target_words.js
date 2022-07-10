@@ -1,6 +1,4 @@
-
-
-module.exports=[
+[
     "cigar",
     "rebut",
     "sissy",
