@@ -2,30 +2,30 @@
     <div class="row">
         <h1 class="text-center">Add Campground</h1>
         <div class="col-6 offset-3 mb-5">
-            <form action="/campgrounds" method="POST">
+            <form action="/campgrounds" method="POST" class="validation" novalidate>
                 <div class="mb-3">
                     <label for="fortitle" class="form-label">Camp Title</label>
-                    <input type="text" class="form-control" id="fortitle" aria-describedby="emailHelp"
+                    <input required type="text" class="form-control" id="fortitle" aria-describedby="emailHelp"
                         name="title">
                 </div>
                 <div class="mb-3">
                     <label for="forlocation" class="form-label">Location</label>
-                    <input type="text" class="form-control" id="forlocation" name="location">
+                    <input required type="text" class="form-control" id="forlocation" name="location">
                 </div>
                 <div class="mb-3">
                     <label for="forimageurl" class="form-label">Image URL</label>
-                    <input type="text" class="form-control" id="forimageurl" name="image">
+                    <input required type="text" class="form-control" id="forimageurl" name="image">
                 </div>
                 <div class="mb-3">
                     <label for="forprice" class="form-label">Campground Price</label>
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping">&#8377</span>
-                    <input type="number" class="form-control" placeholder="0.00" id="forprice" name="price">
+                    <input required type="number" class="form-control" placeholder="0.00" id="forprice" name="price">
                   </div>
                 </div>
                 <div class="mb-3">
                     <label for="fordescription" class="form-label">Description</label>
-                    <textarea type="text" class="form-control" id="fordescription" name="description"></textarea>
+                    <textarea required type="text" class="form-control" id="fordescription" name="description"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Add Camp</button>
             </form>
